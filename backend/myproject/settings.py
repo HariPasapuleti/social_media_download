@@ -22,10 +22,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-*r2ij-h5)^w%b$a3h^l4ob9-!=0$ad4cs7oznqf7kq(^un@kc*'
+# SECRET_KEY = 'django-insecure-*r2ij-h5)^w%b$a3h^l4ob9-!=0$ad4cs7oznqf7kq(^un@kc*'
+SECRET_KEY = os.getenv("SECRET_KEY", "default_secret_key")
 
+# Set debug mode based on environment variable
+DEBUG = os.getenv("DEBUG", "False").lower() in ['true', '1', 'yes']
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# DEBUG = False
+
 
 ALLOWED_HOSTS = ['*']
 
@@ -86,7 +90,8 @@ DATABASES = {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': BASE_DIR / 'db.sqlite3',
     # }
-    'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
+    # 'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
+    'default': dj_database_url.config(default='sqlite:///db.sqlite3', conn_max_age=600)
 }
 
 
