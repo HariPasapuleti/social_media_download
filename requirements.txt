@@ -1,12 +1,15 @@
 asgiref==3.8.1
+Brotli==1.1.0
 dj-database-url==2.3.0
 Django==5.1.4
 django-cors-headers==4.6.0
 djangorestframework==3.15.2
+gunicorn==23.0.0
+packaging==24.2
 psycopg2-binary==2.9.10
 pytube==15.0.0
 sqlparse==0.5.3
 typing_extensions==4.12.2
 tzdata==2024.2
+whitenoise==6.8.2
 yt-dlp==2024.12.23
-gunicorn
