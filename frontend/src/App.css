@@ -1,0 +1,104 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main App Container */
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure full viewport height */
+  padding-top: 80px; /* Space for fixed header */
+  text-align: center; /* Center content horizontally */
+}
+
+.loading {
+  text-align: center;
+  font-size: 20px;
+  color: #007bff;
+}
+.video-preview {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.thumbnail {
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* URL Input Section */
+.url-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%; /* Ensure input container takes full width */
+  max-width: 800px; /* Prevent it from stretching too wide */
+}
+
+.url-input input {
+  padding: 12px;
+  font-size: 16px;
+  width: 100%; /* Allow input to expand in width */
+  max-width: 500px; /* Control the input box size */
+  margin-right: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+
+.url-input button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.url-input button:hover {
+  background-color: #0056b3;
+}
+
+/* Video Quality Selection */
+.video-options {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-options label {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.video-options select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.download-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.download-button:hover {
+  background-color: #218838;
+}
+
