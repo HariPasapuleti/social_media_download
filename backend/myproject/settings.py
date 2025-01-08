@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY", "default_secret_key")
 
 # Set debug mode based on environment variable
-DEBUG = os.getenv("DEBUG", "False").lower() in ['true', '1', 'yes']
+DEBUG = True
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = False
 
@@ -94,12 +94,16 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 #     # 'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
 #     # 'default': dj_database_url.config(default='sqlite:///db.sqlite3', conn_max_age=600)
 # }
+
 DATABASES = {
-    'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgresql://postgres:postgres@localhost:5432/mysite',
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'VideoDB',
+        'USER': 'postgres',
+        'PASSWORD': 'hari9999',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
 
 
