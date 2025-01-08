@@ -5,6 +5,7 @@ from .views import VideoDetails
 from . import views
 
 urlpatterns = [
+    path('', views.index, name='index'),
     path('api/get-video-quality/', VideoDetails.as_view(), name='video_details'),
     path('api/download/', views.download_video, name='download_video'),
 ]

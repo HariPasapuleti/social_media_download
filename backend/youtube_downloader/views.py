@@ -1,5 +1,6 @@
 import yt_dlp as youtube_dl
-from django.http import FileResponse, JsonResponse
+from django.http import FileResponse, JsonResponse, HttpResponse
+
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -8,6 +9,8 @@ import pprint
 from myproject import settings
 from datetime import datetime
 
+def index(request):
+    return HttpResponse("Welcome to my website!")
 # Set up logging
 logger = logging.getLogger(__name__)
 allowed_qualities = ["144p", "240p", "360p", "720p", "1080p", "2160p"]
